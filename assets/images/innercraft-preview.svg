@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <!-- Studio Ambient Gradient -->
+    <radialGradient id="inAmbient" cx="60%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#FBFBFA"/>
+      <stop offset="100%" stop-color="#EFEFEF"/>
+    </radialGradient>
+    
+    <!-- Red Laser Sheen -->
+    <linearGradient id="laserGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E60000" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FF1A1A" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#E60000" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Slab Device Shadow -->
+    <filter id="slabShadow" x="-10%" y="-10%" width="120%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000000" flood-opacity="0.14"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#E60000" flood-opacity="0.08"/>
+    </filter>
+    
+    <clipPath id="screenClip">
+      <rect x="90" y="65" width="1020" height="620" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="750" fill="url(#inAmbient)"/>
+
+  <!-- Device Chassis Slab (High-End Dark Aluminum Frame) -->
+  <g filter="url(#slabShadow)">
+    <rect x="75" y="50" width="1050" height="650" rx="20" fill="#121214" stroke="#2A2A2E" stroke-width="2"/>
+    <rect x="76" y="51" width="1048" height="648" rx="19" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  </g>
+
+  <!-- Screen Content Area -->
+  <g clip-path="url(#screenClip)">
+    <!-- Screen Base (Dark Luxury Editorial Canvas) -->
+    <rect x="90" y="65" width="1020" height="620" fill="#18181B"/>
+
+    <!-- Screen Window Top Bar -->
+    <rect x="90" y="65" width="1020" height="52" fill="#1F1F23"/>
+    <line x1="90" y1="117" x2="1110" y2="117" stroke="#2E2E33" stroke-width="1"/>
+    
+    <!-- Red Status Indicator & Window Dots -->
+    <circle cx="120" cy="91" r="5" fill="#EF4444"/>
+    <circle cx="136" cy="91" r="5" fill="#F59E0B"/>
+    <circle cx="152" cy="91" r="5" fill="#10B981"/>
+    
+    <text x="180" y="96" font-family="'Manrope', sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Innercraft Studio Pro</text>
+    <text x="330" y="96" font-family="'Space Mono', monospace" font-size="11" fill="#71717A">app.innercraft.io/editor/apparel-v4</text>
+
+    <!-- Top Right Actions -->
+    <rect x="880" y="78" width="85" height="26" rx="6" fill="#27272A"/>
+    <text x="898" y="95" font-family="'Space Mono', monospace" font-size="10" font-weight="700" fill="#A1A1AA">300 DPI</text>
+
+    <rect x="980" y="78" width="105" height="26" rx="6" fill="#E60000"/>
+    <text x="1002" y="95" font-family="'Manrope', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">EXPORT READY</text>
+
+    <!-- Left Vector Toolbar -->
+    <rect x="90" y="117" width="65" height="568" fill="#141416"/>
+    <line x1="155" y1="117" x2="155" y2="685" stroke="#27272A" stroke-width="1"/>
+
+    <!-- Active Tool Item -->
+    <rect x="100" y="132" width="45" height="42" rx="8" fill="#E60000"/>
+    <path d="M 122.5 145 L 122.5 161 M 114.5 153 L 130.5 153" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
+
+    <rect x="100" y="184" width="45" height="42" rx="8" fill="#222226"/>
+    <text x="122.5" y="210" text-anchor="middle" font-family="'Manrope', sans-serif" font-size="15" font-weight="700" fill="#A1A1AA">T</text>
+
+    <rect x="100" y="236" width="45" height="42" rx="8" fill="#222226"/>
+    <rect x="114.5" y="250" width="16" height="14" rx="2" fill="none" stroke="#A1A1AA" stroke-width="1.8"/>
+
+    <rect x="100" y="288" width="45" height="42" rx="8" fill="#222226"/>
+    <circle cx="122.5" cy="309" r="8" fill="none" stroke="#A1A1AA" stroke-width="1.8"/>
+
+    <!-- Center Workspace / Canvas Stage -->
+    <rect x="175" y="135" width="670" height="530" rx="10" fill="#09090B" stroke="#27272A" stroke-width="1"/>
+    
+    <!-- Canvas Grid Dots -->
+    <g fill="#27272A">
+      <circle cx="210" cy="170" r="1.5"/><circle cx="260" cy="170" r="1.5"/><circle cx="310" cy="170" r="1.5"/><circle cx="360" cy="170" r="1.5"/>
+      <circle cx="210" cy="220" r="1.5"/><circle cx="260" cy="220" r="1.5"/><circle cx="310" cy="220" r="1.5"/><circle cx="360" cy="220" r="1.5"/>
+      <circle cx="210" cy="270" r="1.5"/><circle cx="260" cy="270" r="1.5"/><circle cx="310" cy="270" r="1.5"/><circle cx="360" cy="270" r="1.5"/>
+    </g>
+
+    <!-- Apparel Vector Silhouette Mockup -->
+    <g transform="translate(340, 160)">
+      <path d="M 90 20 L 160 55 L 210 20 L 280 55 L 350 20 L 400 70 L 350 115 L 320 95 L 320 370 L 70 370 L 70 95 L 40 115 L -10 70 Z" 
+            fill="#18181B" stroke="#3F3F46" stroke-width="2"/>
+      
+      <!-- Print Area Bounding Box with Crimson Neon Glow -->
+      <rect x="105" y="115" width="180" height="210" rx="2" fill="rgba(230,0,0,0.06)" stroke="#E60000" stroke-width="1.8"/>
+      
+      <!-- Transform Handles -->
+      <circle cx="105" cy="115" r="4.5" fill="#FFFFFF" stroke="#E60000" stroke-width="2"/>
+      <circle cx="285" cy="115" r="4.5" fill="#FFFFFF" stroke="#E60000" stroke-width="2"/>
+      <circle cx="105" cy="325" r="4.5" fill="#FFFFFF" stroke="#E60000" stroke-width="2"/>
+      <circle cx="285" cy="325" r="4.5" fill="#FFFFFF" stroke="#E60000" stroke-width="2"/>
+      <circle cx="195" cy="115" r="4.5" fill="#FFFFFF" stroke="#E60000" stroke-width="2"/>
+      <circle cx="195" cy="90" r="5" fill="#E60000"/>
+      <line x1="195" y1="115" x2="195" y2="95" stroke="#E60000" stroke-width="1.5"/>
+
+      <!-- Graphic Artwork Inside Customizer -->
+      <g transform="translate(140, 155)">
+        <circle cx="55" cy="55" r="38" fill="#E60000"/>
+        <path d="M 35 55 L 75 55 M 55 35 L 55 75" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+        <text x="55" y="118" text-anchor="middle" font-family="'Manrope', sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">INNERCRAFT</text>
+        <text x="55" y="134" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="#A1A1AA">KONVA / FABRIC LAYER</text>
+      </g>
+    </g>
+
+    <!-- Floating Live Metrics Pill over Canvas -->
+    <g transform="translate(200, 585)">
+      <rect x="0" y="0" width="310" height="48" rx="8" fill="#18181B" stroke="#27272A" stroke-width="1.2"/>
+      <circle cx="22" cy="24" r="5" fill="#22C55E"/>
+      <text x="36" y="22" font-family="'Manrope', sans-serif" font-size="11" font-weight="600" fill="#FFFFFF">RabbitMQ Queue: 0 backlog</text>
+      <text x="36" y="38" font-family="'Space Mono', monospace" font-size="10" fill="#71717A">MinIO S3 storage sync active</text>
+    </g>
+
+    <!-- Right Inspector Panel -->
+    <rect x="865" y="117" width="245" height="568" fill="#141416"/>
+    <line x1="865" y1="117" x2="865" y2="685" stroke="#27272A" stroke-width="1"/>
+
+    <text x="888" y="152" font-family="'Manrope', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Design Attributes</text>
+
+    <!-- Colorway Palette -->
+    <text x="888" y="185" font-family="'Space Mono', monospace" font-size="10" fill="#71717A">FABRIC COLORWAY</text>
+    <circle cx="902" cy="210" r="11" fill="#09090B" stroke="#E60000" stroke-width="2"/>
+    <circle cx="934" cy="210" r="11" fill="#E60000"/>
+    <circle cx="966" cy="210" r="11" fill="#FAFAFA"/>
+    <circle cx="998" cy="210" r="11" fill="#27272A"/>
+
+    <!-- Transform Dimensions -->
+    <text x="888" y="255" font-family="'Space Mono', monospace" font-size="10" fill="#71717A">VECTOR DIMENSIONS</text>
+    <rect x="888" y="268" width="95" height="32" rx="6" fill="#1F1F23" stroke="#2E2E33" stroke-width="1"/>
+    <text x="900" y="289" font-family="'Space Mono', monospace" font-size="11" fill="#FAFAFA">W: 285mm</text>
+
+    <rect x="995" y="268" width="95" height="32" rx="6" fill="#1F1F23" stroke="#2E2E33" stroke-width="1"/>
+    <text x="1007" y="289" font-family="'Space Mono', monospace" font-size="11" fill="#FAFAFA">H: 340mm</text>
+
+    <!-- System Architecture Pill -->
+    <text x="888" y="335" font-family="'Space Mono', monospace" font-size="10" fill="#71717A">BACKEND STACK</text>
+    <rect x="888" y="348" width="202" height="70" rx="8" fill="#1F1F23" stroke="#2E2E33" stroke-width="1"/>
+    <text x="902" y="372" font-family="'Manrope', sans-serif" font-size="11" font-weight="600" fill="#FFFFFF">.NET + PostgreSQL</text>
+    <text x="902" y="392" font-family="'Space Mono', monospace" font-size="10" fill="#EF4444">MongoDB artwork cache</text>
+    <text x="902" y="408" font-family="'Space Mono', monospace" font-size="10" fill="#22C55E">Traefik reverse proxy</text>
+  </g>
+</svg>

@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <radialGradient id="mcpAmb" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#FCFCFC"/>
+      <stop offset="100%" stop-color="#EFEFEF"/>
+    </radialGradient>
+    
+    <filter id="mcpSlabShadow" x="-10%" y="-10%" width="120%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000000" flood-opacity="0.15"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#E60000" flood-opacity="0.1"/>
+    </filter>
+
+    <clipPath id="mcpScreenClip">
+      <rect x="90" y="65" width="1020" height="620" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#mcpAmb)"/>
+
+  <!-- Device Chassis Slab -->
+  <g filter="url(#mcpSlabShadow)">
+    <rect x="75" y="50" width="1050" height="650" rx="20" fill="#0E0E10" stroke="#252528" stroke-width="2"/>
+    <rect x="76" y="51" width="1048" height="648" rx="19" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  </g>
+
+  <!-- Screen Content -->
+  <g clip-path="url(#mcpScreenClip)">
+    <rect x="90" y="65" width="1020" height="620" fill="#121215"/>
+
+    <!-- Screen Top Bar -->
+    <rect x="90" y="65" width="1020" height="52" fill="#18181C"/>
+    <line x1="90" y1="117" x2="1110" y2="117" stroke="#27272A" stroke-width="1"/>
+    
+    <circle cx="120" cy="91" r="5" fill="#EF4444"/>
+    <circle cx="136" cy="91" r="5" fill="#F59E0B"/>
+    <circle cx="152" cy="91" r="5" fill="#10B981"/>
+    
+    <text x="180" y="96" font-family="'Manrope', sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">FastMCP Orchestrator</text>
+    <text x="350" y="96" font-family="'Space Mono', monospace" font-size="11" fill="#71717A">mcp://cluster-01.fastmcp.internal</text>
+
+    <!-- Top Status -->
+    <rect x="965" y="78" width="120" height="26" rx="6" fill="#2E1010" stroke="#7F1D1D" stroke-width="1"/>
+    <text x="980" y="95" font-family="'Space Mono', monospace" font-size="10" font-weight="700" fill="#EF4444">● LATENCY: 12ms</text>
+
+    <!-- Left Tool Repository -->
+    <rect x="90" y="117" width="260" height="568" fill="#151518"/>
+    <line x1="350" y1="117" x2="350" y2="685" stroke="#27272A" stroke-width="1"/>
+
+    <text x="115" y="150" font-family="'Space Mono', monospace" font-size="10" font-weight="700" fill="#71717A">REGISTERED MCP TOOLS</text>
+
+    <!-- Tool Card 1 -->
+    <g transform="translate(110, 168)">
+      <rect x="0" y="0" width="220" height="54" rx="8" fill="#1E1E24" stroke="#E60000" stroke-width="1.2"/>
+      <text x="14" y="24" font-family="'Manrope', sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">InventoryService</text>
+      <text x="14" y="42" font-family="'Space Mono', monospace" font-size="10" fill="#EF4444">rpc: query_sku_stock()</text>
+    </g>
+
+    <!-- Tool Card 2 -->
+    <g transform="translate(110, 234)">
+      <rect x="0" y="0" width="220" height="54" rx="8" fill="#18181C" stroke="#27272A" stroke-width="1"/>
+      <text x="14" y="24" font-family="'Manrope', sans-serif" font-size="12" font-weight="600" fill="#E4E4E7">VoiceSpeechAgent</text>
+      <text x="14" y="42" font-family="'Space Mono', monospace" font-size="10" fill="#A1A1AA">rpc: elevenlabs_tts()</text>
+    </g>
+
+    <!-- Tool Card 3 -->
+    <g transform="translate(110, 300)">
+      <rect x="0" y="0" width="220" height="54" rx="8" fill="#18181C" stroke="#27272A" stroke-width="1"/>
+      <text x="14" y="24" font-family="'Manrope', sans-serif" font-size="12" font-weight="600" fill="#E4E4E7">DatabaseConnector</text>
+      <text x="14" y="42" font-family="'Space Mono', monospace" font-size="10" fill="#A1A1AA">rpc: pgsql_read_stream()</text>
+    </g>
+
+    <!-- Center Node Graph Stage -->
+    <!-- Center Node: FastMCP Server -->
+    <g transform="translate(720, 280)">
+      <circle cx="0" cy="0" r="75" fill="rgba(230,0,0,0.08)"/>
+      <circle cx="0" cy="0" r="58" fill="#1E1E24" stroke="#E60000" stroke-width="2.5"/>
+      <text x="0" y="-6" text-anchor="middle" font-family="'Manrope', sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">FastMCP</text>
+      <text x="0" y="14" text-anchor="middle" font-family="'Space Mono', monospace" font-size="10" font-weight="700" fill="#EF4444">Router Engine</text>
+    </g>
+
+    <!-- Conduits with Red Laser Pulses -->
+    <path d="M 662 280 C 560 280, 520 180, 460 180" fill="none" stroke="#E60000" stroke-width="2"/>
+    <circle cx="560" cy="225" r="3.5" fill="#E60000"/>
+
+    <g transform="translate(460, 180)">
+      <rect x="-80" y="-26" width="160" height="52" rx="8" fill="#1E1E24" stroke="#2E2E33" stroke-width="1.2"/>
+      <text x="0" y="-4" text-anchor="middle" font-family="'Manrope', sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">Anthropic Claude</text>
+      <text x="0" y="14" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="#A1A1AA">MCP Client Tool Use</text>
+    </g>
+
+    <path d="M 662 280 C 560 280, 520 380, 460 380" fill="none" stroke="#E60000" stroke-width="2"/>
+    <circle cx="560" cy="335" r="3.5" fill="#E60000"/>
+
+    <g transform="translate(460, 380)">
+      <rect x="-80" y="-26" width="160" height="52" rx="8" fill="#1E1E24" stroke="#2E2E33" stroke-width="1.2"/>
+      <text x="0" y="-4" text-anchor="middle" font-family="'Manrope', sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">OpenAI Function</text>
+      <text x="0" y="14" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="#A1A1AA">JSON Tool Calling</text>
+    </g>
+
+    <path d="M 778 280 C 870 280, 890 180, 960 180" fill="none" stroke="#E60000" stroke-width="2"/>
+    <circle cx="870" cy="225" r="3.5" fill="#E60000"/>
+
+    <g transform="translate(960, 180)">
+      <rect x="-80" y="-26" width="160" height="52" rx="8" fill="#1E1E24" stroke="#2E2E33" stroke-width="1.2"/>
+      <text x="0" y="-4" text-anchor="middle" font-family="'Manrope', sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">Google Gemini</text>
+      <text x="0" y="14" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="#A1A1AA">Multimodal Tool Sync</text>
+    </g>
+
+    <path d="M 778 280 C 870 280, 890 380, 960 380" fill="none" stroke="#E60000" stroke-width="2"/>
+    <circle cx="870" cy="335" r="3.5" fill="#E60000"/>
+
+    <g transform="translate(960, 380)">
+      <rect x="-80" y="-26" width="160" height="52" rx="8" fill="#1E1E24" stroke="#E60000" stroke-width="1.2"/>
+      <text x="0" y="-4" text-anchor="middle" font-family="'Manrope', sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">ElevenLabs Voice</text>
+      <text x="0" y="14" text-anchor="middle" font-family="'Space Mono', monospace" font-size="9" fill="#EF4444">Speech Synthesis</text>
+    </g>
+
+    <!-- Bottom Event Stream Console -->
+    <rect x="370" y="475" width="720" height="190" rx="10" fill="#09090B" stroke="#27272A" stroke-width="1"/>
+    <text x="395" y="505" font-family="'Space Mono', monospace" font-size="11" fill="#71717A">// FAST_MCP_EVENT_STREAM (REAL-TIME PIPELINE)</text>
+    <text x="395" y="535" font-family="'Space Mono', monospace" font-size="11" fill="#EF4444">[AGENT_REQUEST]</text>
+    <text x="510" y="535" font-family="'Space Mono', monospace" font-size="11" fill="#FAFAFA">"Query low-stock printing inventory and trigger reorder workflow"</text>
+    <text x="395" y="565" font-family="'Space Mono', monospace" font-size="11" fill="#22C55E">[TOOL_DISPATCH]</text>
+    <text x="525" y="565" font-family="'Space Mono', monospace" font-size="11" fill="#D4D4D8">FastMCP -> InventoryService: 12 records returned (PostgreSQL 4ms)</text>
+    <text x="395" y="595" font-family="'Space Mono', monospace" font-size="11" fill="#3B82F6">[VOICE_STREAM]</text>
+    <text x="520" y="595" font-family="'Space Mono', monospace" font-size="11" fill="#D4D4D8">Synthesized ElevenLabs audio payload dispatched to client endpoint</text>
+  </g>
+</svg>

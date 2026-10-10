@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <radialGradient id="cliAmb" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#FCFCFC"/>
+      <stop offset="100%" stop-color="#EDEDED"/>
+    </radialGradient>
+    <filter id="cliSlabShadow" x="-10%" y="-10%" width="120%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000000" flood-opacity="0.14"/>
+    </filter>
+    <clipPath id="cliScreenClip">
+      <rect x="90" y="65" width="1020" height="620" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#cliAmb)"/>
+
+  <!-- Device Chassis Slab -->
+  <g filter="url(#cliSlabShadow)">
+    <rect x="75" y="50" width="1050" height="650" rx="20" fill="#101012" stroke="#252528" stroke-width="2"/>
+    <rect x="76" y="51" width="1048" height="648" rx="19" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  </g>
+
+  <!-- Screen Content -->
+  <g clip-path="url(#cliScreenClip)">
+    <rect x="90" y="65" width="1020" height="620" fill="#141416"/>
+
+    <!-- Screen Header -->
+    <rect x="90" y="65" width="1020" height="52" fill="#1A1A1E"/>
+    <line x1="90" y1="117" x2="1110" y2="117" stroke="#27272A" stroke-width="1"/>
+    
+    <circle cx="120" cy="91" r="5" fill="#EF4444"/>
+    <circle cx="136" cy="91" r="5" fill="#F59E0B"/>
+    <circle cx="152" cy="91" r="5" fill="#10B981"/>
+    
+    <text x="180" y="96" font-family="'Manrope', sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Client Platforms Portfolio</text>
+    <text x="370" y="96" font-family="'Space Mono', monospace" font-size="11" fill="#71717A">AllRise Health · AblyCare · Adencont · Access</text>
+
+    <!-- Top Badge -->
+    <rect x="980" y="78" width="105" height="26" rx="6" fill="#1E1E24"/>
+    <text x="996" y="95" font-family="'Space Mono', monospace" font-size="10" font-weight="700" fill="#E4E4E7">PRODUCTION</text>
+
+    <!-- Left Showcase: AllRise Health Portal Card -->
+    <g transform="translate(120, 140)">
+      <rect x="0" y="0" width="460" height="510" rx="12" fill="#1C1C20" stroke="#27272A" stroke-width="1"/>
+      
+      <!-- Card Bar -->
+      <rect x="0" y="0" width="460" height="50" rx="12" fill="#222226"/>
+      <text x="24" y="32" font-family="'Manrope', sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">AllRise Health Telehealth Hub</text>
+      <rect x="360" y="14" width="80" height="22" rx="4" fill="#3B1212"/>
+      <text x="372" y="29" font-family="'Space Mono', monospace" font-size="9" font-weight="700" fill="#EF4444">HEALTHCARE</text>
+
+      <!-- Vitals Widget -->
+      <g transform="translate(20, 70)">
+        <rect x="0" y="0" width="420" height="90" rx="8" fill="#161619" stroke="#27272A" stroke-width="1"/>
+        <text x="18" y="28" font-family="'Space Mono', monospace" font-size="10" fill="#71717A">PATIENT VITALS TELEMETRY</text>
+        <text x="18" y="60" font-family="'Manrope', sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Active Remote Care #04</text>
+        
+        <!-- Red ECG line -->
+        <path d="M 280 50 L 305 50 L 315 25 L 325 70 L 335 40 L 345 55 L 390 55" fill="none" stroke="#EF4444" stroke-width="2.2"/>
+      </g>
+
+      <!-- Consultations list -->
+      <g transform="translate(20, 180)">
+        <text x="0" y="20" font-family="'Manrope', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Upcoming Consultations</text>
+        
+        <rect x="0" y="35" width="420" height="48" rx="6" fill="#161619" stroke="#27272A" stroke-width="1"/>
+        <text x="16" y="64" font-family="'Manrope', sans-serif" font-size="12" fill="#FFFFFF">Dr. S. Nair (Cardiology Specialization)</text>
+        <text x="340" y="64" font-family="'Space Mono', monospace" font-size="11" fill="#EF4444">10:30 AM</text>
+
+        <rect x="0" y="95" width="420" height="48" rx="6" fill="#161619" stroke="#27272A" stroke-width="1"/>
+        <text x="16" y="124" font-family="'Manrope', sans-serif" font-size="12" fill="#FFFFFF">Diagnostic Blood Chemistry Review</text>
+        <text x="340" y="124" font-family="'Space Mono', monospace" font-size="11" fill="#71717A">02:15 PM</text>
+      </g>
+
+      <!-- Health Badges -->
+      <g transform="translate(20, 360)">
+        <text x="0" y="20" font-family="'Manrope', sans-serif" font-size="12" font-weight="700" fill="#A1A1AA">STANDARDS IMPLEMENTED</text>
+        <text x="0" y="46" font-family="'Manrope', sans-serif" font-size="12" fill="#D4D4D8">✓ HIPAA-aligned design patterns</text>
+        <text x="0" y="72" font-family="'Manrope', sans-serif" font-size="12" fill="#D4D4D8">✓ High-contrast accessible typography</text>
+        <text x="0" y="98" font-family="'Manrope', sans-serif" font-size="12" fill="#D4D4D8">✓ Sub-second page response times</text>
+      </g>
+    </g>
+
+    <!-- Right Showcase: AblyCare & Corporate Sites -->
+    <g transform="translate(615, 140)">
+      <rect x="0" y="0" width="460" height="510" rx="12" fill="#1C1C20" stroke="#27272A" stroke-width="1"/>
+      
+      <rect x="0" y="0" width="460" height="50" rx="12" fill="#222226"/>
+      <text x="24" y="32" font-family="'Manrope', sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">AblyCare &amp; Enterprise Portals</text>
+      <rect x="360" y="14" width="80" height="22" rx="4" fill="#27272A"/>
+      <text x="374" y="29" font-family="'Space Mono', monospace" font-size="9" font-weight="700" fill="#A1A1AA">CORPORATE</text>
+
+      <g transform="translate(20, 70)">
+        <rect x="0" y="0" width="420" height="220" rx="8" fill="#161619" stroke="#27272A" stroke-width="1"/>
+        <text x="18" y="30" font-family="'Manrope', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Technical Deliverables</text>
+        
+        <circle cx="25" cy="62" r="3.5" fill="#EF4444"/>
+        <text x="38" y="66" font-family="'Manrope', sans-serif" font-size="12" font-weight="600" fill="#FAFAFA">Multi-Tenant UI Patterns</text>
+        <text x="38" y="84" font-family="'Manrope', sans-serif" font-size="11" fill="#71717A">Modular components customized to brand guidelines</text>
+
+        <circle cx="25" cy="112" r="3.5" fill="#EF4444"/>
+        <text x="38" y="116" font-family="'Manrope', sans-serif" font-size="12" font-weight="600" fill="#FAFAFA">Form Validation &amp; API Ingestion</text>
+        <text x="38" y="134" font-family="'Manrope', sans-serif" font-size="11" fill="#71717A">Robust REST endpoints for inquiries &amp; client onboarding</text>
+
+        <circle cx="25" cy="162" r="3.5" fill="#EF4444"/>
+        <text x="38" y="166" font-family="'Manrope', sans-serif" font-size="12" font-weight="600" fill="#FAFAFA">Cross-Browser Optimization</text>
+        <text x="38" y="184" font-family="'Manrope', sans-serif" font-size="11" fill="#71717A">Tested across mobile Safari, Chrome &amp; desktop retina</text>
+      </g>
+
+      <g transform="translate(20, 310)">
+        <rect x="0" y="0" width="420" height="170" rx="8" fill="#09090B" stroke="#27272A" stroke-width="1"/>
+        <text x="20" y="34" font-family="'Space Mono', monospace" font-size="10" fill="#EF4444">// PORTFOLIO OUTCOMES</text>
+        <text x="20" y="70" font-family="'Manrope', sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">4+ Client Sites</text>
+        <text x="20" y="98" font-family="'Manrope', sans-serif" font-size="12" fill="#A1A1AA">AllRise Health · AblyCare · Adencont · Access</text>
+        <text x="20" y="125" font-family="'Space Mono', monospace" font-size="11" fill="#10B981">● 100% Core Web Vitals Pass Rate</text>
+      </g>
+    </g>
+  </g>
+</svg>

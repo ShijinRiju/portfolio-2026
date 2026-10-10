@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shijin Riju · AI &amp; Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Shijin Riju, AI &amp; Full Stack Developer with 2+ years of professional experience building web applications, microservices, and AI-driven solutions." />
+  
+  <link rel="icon" type="image/svg+xml" href="/assets/shijin-logo-icon-black.svg" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  
+  <!-- Main Stylesheet linked directly in head to prevent FOUC / style breakage on refresh -->
+  <link rel="stylesheet" href="/src/style.css" />
+  
+  <style>
+    /* Critical Anti-FOUC & Preloader CSS */
+    html, body {
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    .preloader {
+      position: fixed;
+      inset: 0;
+      background: #ffffff;
+      z-index: 999999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .preloader-logo-wrap {
+      width: 76px;
+      height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .preloader-svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+  </style>
+</head>
+<body>
+  <!-- Custom Expressive Cursor -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true">
+    <span class="cursor-label"></span>
+  </div>
+
+  <!-- Preloader with Signature Vector Logo Icon GSAP Draw Animation -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-logo-wrap">
+      <svg class="preloader-svg" viewBox="0 0 2767 3229" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="preloader-draw-path path-red" d="M1545.26 1864.3L585.474 1301.49L1595.51 713.56C1635.71 693.46 1717.12 613.059 1721.14 452.257C1725.16 291.454 1709.42 83.7512 1701.04 0L243.769 849.237C67.8915 989.94 -185.372 1359.79 208.594 1713.55L927.18 2135.66C967.381 2149.06 1063.86 2167.82 1128.18 2135.66L1545.26 1864.3Z" stroke="#e60000" stroke-width="110" stroke-linecap="round" stroke-linejoin="round" />
+        <path class="preloader-draw-path path-dark" d="M1221.74 1364.48L2181.53 1927.29L1171.49 2515.22C1131.29 2535.32 1049.88 2615.72 1045.86 2776.53C1041.84 2937.33 1057.58 3145.03 1065.96 3228.78L2523.23 2379.55C2699.11 2238.84 2952.37 1869 2558.41 1515.23L1839.82 1093.13C1799.62 1079.73 1703.14 1060.97 1638.82 1093.13L1221.74 1364.48Z" stroke="#111111" stroke-width="110" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
+    <div class="preloader-text">SHIJIN RIJU</div>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#hero" class="logo-link btn-magnetic" aria-label="Shijin Riju Home">
+        <img src="/assets/shijin-logo-black.svg" alt="Shijin Riju" class="logo-svg" />
+      </a>
+
+      <div class="header-actions">
+        <a href="mailto:shijinriju358@gmail.com" class="resume-btn btn-magnetic">
+          <span>Resume</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+
+        <a href="#contact" class="header-cta btn-magnetic">
+          <span>Say hello</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO SECTION (Containerised 2-Column Grid) -->
+    <section id="hero" class="hero-section" aria-label="Introduction">
+      <div class="container hero-container">
+        <div class="hero-grid">
+          <!-- Left Column: Content -->
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="badge-pulse"></span>
+              <span>AI &amp; FULL STACK DEVELOPER · KOTTAYAM, INDIA</span>
+            </div>
+
+            <h1 class="hero-title">
+              <span class="hero-title-line"><span>Building full-stack</span></span>
+              <span class="hero-title-line"><span>products &amp; <em>AI solutions.</em></span></span>
+            </h1>
+
+            <p class="hero-desc">
+              Specializing in Python, .NET, React &amp; FastMCP agentic architectures — crafting responsive interfaces, microservices, and AI-driven platforms.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#work" class="btn-primary btn-magnetic">
+                <span>View My Work</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+              </a>
+
+              <a href="#contact" class="btn-secondary btn-magnetic">
+                <span>Get in Touch</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: 3D Logo Icon (Bold, Big & Adjacent to Content) -->
+          <div class="hero-visual-col" aria-hidden="true">
+            <div class="hero-canvas-wrapper">
+              <canvas id="hero-canvas" class="hero-webgl-canvas"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Cue (Anchored Inside Container Bounds) -->
+        <div class="hero-scroll-cue" aria-hidden="true">
+          <div class="scroll-track-line"></div>
+          <span>Scroll to explore</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE TICKER -->
+    <div class="marquee-section" aria-hidden="true">
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <div class="marquee-item">Python &amp; FastAPI <span class="marquee-dot"></span></div>
+          <div class="marquee-item">FastMCP &amp; AI Agents <span class="marquee-dot"></span></div>
+          <div class="marquee-item">React &amp; Vite <span class="marquee-dot"></span></div>
+          <div class="marquee-item">C# &amp; .NET Core <span class="marquee-dot"></span></div>
+          <div class="marquee-item">Konva.js &amp; Fabric.js <span class="marquee-dot"></span></div>
+          <div class="marquee-item">Docker &amp; Microservices <span class="marquee-dot"></span></div>
+          <div class="marquee-item">PostgreSQL &amp; MongoDB <span class="marquee-dot"></span></div>
+          <div class="marquee-item">RabbitMQ &amp; Traefik <span class="marquee-dot"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT SECTION (Moved to top immediately after Hero) -->
+    <section id="about" class="about-section" aria-label="About Shijin Riju">
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <span class="section-label">PROFILE &amp; BACKGROUND</span>
+          <h2 class="section-title">About <em>Shijin Riju.</em></h2>
+          <p class="section-desc">AI &amp; Full Stack Developer based in Kottayam, Kerala with a focus on web applications, microservices, and AI integrations.</p>
+          <div class="section-divider-line"></div>
+        </header>
+
+        <div class="about-layout">
+          <div class="about-media-col" data-reveal>
+            <!-- User's Authentic Photo with Studio Frame & Status Badge -->
+            <div class="portrait-frame">
+              <img src="/assets/images/portrait.jpg" alt="Shijin Riju" class="portrait-img" loading="lazy" />
+              <div class="portrait-badge-overlay">
+                <span class="portrait-badge-name">Shijin Riju</span>
+                <span class="portrait-badge-status">● Active Developer · Kottayam</span>
+              </div>
+            </div>
+
+            <div class="journey-tab-nav" role="tablist">
+              <button type="button" class="journey-tab-btn is-active" data-journey-city="kottayam">Kottayam<br/><small>Roots</small></button>
+              <button type="button" class="journey-tab-btn" data-journey-city="kochi">Kochi<br/><small>Foundation</small></button>
+              <button type="button" class="journey-tab-btn" data-journey-city="now">Present<br/><small>Scale</small></button>
+            </div>
+
+            <div class="journey-story-box">
+              <div class="journey-panel is-active" data-journey-story="kottayam">
+                <p>Based in Kottayam, Kerala. Graduated with a B.Sc. in Computer Science (70%) with a strong passion for clean architecture, data structures, and human-centered design.</p>
+              </div>
+              <div class="journey-panel" data-journey-story="kochi">
+                <p>Kochi development chapter: Built full stack Python web applications at LCC Computer Education, completing internship with Grade A.</p>
+              </div>
+              <div class="journey-panel" data-journey-story="now">
+                <p>Engineering production e-commerce, AI tools, and microservices at Citymapia Pvt Ltd, leveraging FastMCP and modern AI workflows.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-copy-col" data-reveal>
+            <h3 class="about-lead">
+              Bridging UI/UX empathy with <em>deep backend engineering.</em>
+            </h3>
+
+            <div class="about-body-text">
+              <p>
+                I joined Citymapia originally as a UI/UX-focused developer, which shaped how I build every application: from the end-user's perspective first. 
+                Whether architecting microservices with RabbitMQ or wiring up complex interactive canvases with Konva.js and Fabric.js, my priority is seamless responsiveness and rock-solid reliability.
+              </p>
+              <p>
+                Over the past two years, I have actively embraced AI-assisted development (Claude, Cursor, ChatGPT, FastMCP) to build internal MCP orchestrators and accelerate production cycles without sacrificing code quality.
+              </p>
+              <p>
+                Comfortable tracing issues across frontend, API, and service layers and continually improving existing code for long-term maintainability.
+              </p>
+            </div>
+
+            <div class="language-pills-row">
+              <div class="lang-pill"><strong>English:</strong> Professional</div>
+              <div class="lang-pill"><strong>Malayalam:</strong> Native</div>
+              <div class="lang-pill"><strong>Hindi:</strong> Basic</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK (With Awwwards Device Slab Previews) -->
+    <section id="work" class="work-section" aria-label="Selected Projects">
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <span class="section-label">SELECTED PROJECTS</span>
+          <h2 class="section-title">Products <em>&amp;</em> Engineering.</h2>
+          <p class="section-desc">Key web applications, e-commerce platforms, and AI orchestration systems built across the stack.</p>
+          <div class="section-divider-line"></div>
+        </header>
+
+        <div class="projects-grid">
+          <!-- Project 01: Innercraft -->
+          <article class="project-card" data-reveal>
+            <div class="project-media-wrapper" data-cursor-view data-project-trigger="innercraft">
+              <span class="project-badge-tag">FULL STACK E-COMMERCE</span>
+              <!-- Innercraft: E-commerce Product Customizer UI -->
+              <img src="/assets/images/innercraft.png" alt="Innercraft E-Commerce Customizer" class="project-img-inner" loading="lazy" />
+            </div>
+            <div class="project-info">
+              <div class="project-meta-top">
+                <span class="project-index">[ 01 / 05 ]</span>
+                <span class="project-role-tag">Main Developer — Full Stack</span>
+              </div>
+              <h3 class="project-title">Innercraft Web App</h3>
+              <p class="project-summary">
+                Printing e-commerce platform featuring browser-based customization with Konva.js and Fabric.js, customer storefront, admin panel, and REST microservices.
+              </p>
+              <div class="project-impact-box">
+                <span class="impact-metric">Interactive Canvas</span>
+                <span class="impact-label">Browser-based product personalization engine</span>
+              </div>
+              <div class="project-tech-pills">
+                <span class="tech-mini-pill">React</span>
+                <span class="tech-mini-pill">.NET</span>
+                <span class="tech-mini-pill">PostgreSQL</span>
+                <span class="tech-mini-pill">MongoDB</span>
+                <span class="tech-mini-pill">RabbitMQ</span>
+                <span class="tech-mini-pill">Docker</span>
+                <span class="tech-mini-pill">Konva.js</span>
+              </div>
+              <a href="#" class="project-action-link" data-project-trigger="innercraft">
+                <span>View case details</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 02: MCP Orchestrator -->
+          <article class="project-card" data-reveal>
+            <div class="project-media-wrapper" data-cursor-view data-project-trigger="mcp-orchestrator">
+              <span class="project-badge-tag">AI ARCHITECTURE</span>
+              <!-- MCP Orchestrator: AI Node Graph -->
+              <img src="/assets/images/mcp-orchestrator.png" alt="MCP Orchestrator AI Architecture" class="project-img-inner" loading="lazy" />
+            </div>
+            <div class="project-info">
+              <div class="project-meta-top">
+                <span class="project-index">[ 02 / 05 ]</span>
+                <span class="project-role-tag">Developer — Architecture &amp; Implementation</span>
+              </div>
+              <h3 class="project-title">MCP Orchestrator</h3>
+              <p class="project-summary">
+                Internal AI orchestration platform connecting multiple MCP clients and tools so business actions can be triggered via natural-language or voice requests.
+              </p>
+              <div class="project-impact-box">
+                <span class="impact-metric">FastMCP Backend</span>
+                <span class="impact-label">Tool chaining across OpenAI, Gemini &amp; ElevenLabs</span>
+              </div>
+              <div class="project-tech-pills">
+                <span class="tech-mini-pill">Python</span>
+                <span class="tech-mini-pill">FastMCP</span>
+                <span class="tech-mini-pill">FastAPI</span>
+                <span class="tech-mini-pill">OpenAI API</span>
+                <span class="tech-mini-pill">Gemini API</span>
+                <span class="tech-mini-pill">ElevenLabs</span>
+              </div>
+              <a href="#" class="project-action-link" data-project-trigger="mcp-orchestrator">
+                <span>View case details</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 03: Citymapia WorkSuit -->
+          <article class="project-card" data-reveal>
+            <div class="project-media-wrapper" data-cursor-view data-project-trigger="citymapia-worksuit">
+              <span class="project-badge-tag">ENTERPRISE SYSTEM</span>
+              <!-- Citymapia WorkSuit: Dashboard UI -->
+              <img src="/assets/images/citymapia-worksuit.png" alt="Citymapia WorkSuit Employee Dashboard" class="project-img-inner" loading="lazy" />
+            </div>
+            <div class="project-info">
+              <div class="project-meta-top">
+                <span class="project-index">[ 03 / 05 ]</span>
+                <span class="project-role-tag">UI/UX &amp; Frontend Developer</span>
+              </div>
+              <h3 class="project-title">Citymapia WorkSuit</h3>
+              <p class="project-summary">
+                Employee management system interface designed and implemented across application screens with responsive layouts and reusable UI patterns.
+              </p>
+              <div class="project-impact-box">
+                <span class="impact-metric">Modular UI</span>
+                <span class="impact-label">Streamlined workflows across company departments</span>
+              </div>
+              <div class="project-tech-pills">
+                <span class="tech-mini-pill">HTML5</span>
+                <span class="tech-mini-pill">CSS3</span>
+                <span class="tech-mini-pill">JavaScript</span>
+                <span class="tech-mini-pill">Bootstrap</span>
+                <span class="tech-mini-pill">UI/UX</span>
+              </div>
+              <a href="#" class="project-action-link" data-project-trigger="citymapia-worksuit">
+                <span>View case details</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 04: Carbonmapia -->
+          <article class="project-card" data-reveal>
+            <div class="project-media-wrapper" data-cursor-view data-project-trigger="carbonmapia">
+              <span class="project-badge-tag">SUSTAINABILITY ANALYTICS</span>
+              <!-- Carbonmapia: Carbon Analytics Dashboard -->
+              <img src="/assets/images/carbonmapia.png" alt="Carbonmapia Sustainability Dashboard" class="project-img-inner" loading="lazy" />
+            </div>
+            <div class="project-info">
+              <div class="project-meta-top">
+                <span class="project-index">[ 04 / 05 ]</span>
+                <span class="project-role-tag">UI/UX Developer</span>
+              </div>
+              <h3 class="project-title">Carbonmapia</h3>
+              <p class="project-summary">
+                Website interface and application UI for a carbon-emission management platform, visualizing emissions data and environmental impact metrics.
+              </p>
+              <div class="project-impact-box">
+                <span class="impact-metric">Carbon Tracking</span>
+                <span class="impact-label">Accessible environmental audit visualization</span>
+              </div>
+              <div class="project-tech-pills">
+                <span class="tech-mini-pill">HTML5</span>
+                <span class="tech-mini-pill">CSS3</span>
+                <span class="tech-mini-pill">JavaScript</span>
+                <span class="tech-mini-pill">Bootstrap</span>
+                <span class="tech-mini-pill">Analytics</span>
+              </div>
+              <a href="#" class="project-action-link" data-project-trigger="carbonmapia">
+                <span>View case details</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 05: Client Web Projects -->
+          <article class="project-card" data-reveal>
+            <div class="project-media-wrapper" data-cursor-view data-project-trigger="client-flagships">
+              <span class="project-badge-tag">CLIENT PLATFORMS</span>
+              <!-- Client Web Flagships: Multi-site grid -->
+              <img src="/assets/images/client-websites.png" alt="Client Web Flagships Showcase" class="project-img-inner" loading="lazy" />
+            </div>
+            <div class="project-info">
+              <div class="project-meta-top">
+                <span class="project-index">[ 05 / 05 ]</span>
+                <span class="project-role-tag">Frontend / UI Developer</span>
+              </div>
+              <h3 class="project-title">Client Web Flagships</h3>
+              <p class="project-summary">
+                Contributed to multiple client websites across healthcare, corporate, and organizational projects including AllRise Health, AblyCare, Adencont, and Access Corporation.
+              </p>
+              <div class="project-impact-box">
+                <span class="impact-metric">Production Web</span>
+                <span class="impact-label">Healthcare and corporate digital presence</span>
+              </div>
+              <div class="project-tech-pills">
+                <span class="tech-mini-pill">JavaScript</span>
+                <span class="tech-mini-pill">HTML5</span>
+                <span class="tech-mini-pill">CSS3</span>
+                <span class="tech-mini-pill">Bootstrap</span>
+                <span class="tech-mini-pill">Responsive Design</span>
+              </div>
+              <a href="#" class="project-action-link" data-project-trigger="client-flagships">
+                <span>View case details</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENGINEERING & INFRASTRUCTURE SECTION -->
+    <section id="engineering" class="engineering-section" aria-label="Engineering &amp; Infrastructure">
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <span class="section-label">SYSTEMS ARCHITECTURE</span>
+          <h2 class="section-title">Engineering <em>&amp;</em> Infrastructure.</h2>
+          <p class="section-desc">Hands-on experience with Dockerized applications, Git-based CI/CD, REST services, microservice architectures, and backend troubleshooting.</p>
+          <div class="section-divider-line"></div>
+        </header>
+
+        <div class="engineering-grid" data-reveal>
+          <div class="engineering-card">
+            <span class="eng-num">01 / ARCHITECTURE</span>
+            <h3 class="eng-title">Microservices &amp; Messaging</h3>
+            <p class="eng-desc">
+              Designing decoupled service boundaries, RabbitMQ message queues for asynchronous background tasks, and Traefik reverse-proxy gateway routing.
+            </p>
+          </div>
+
+          <div class="engineering-card">
+            <span class="eng-num">02 / DEVOPS</span>
+            <h3 class="eng-title">Docker &amp; CI/CD Pipelines</h3>
+            <p class="eng-desc">
+              Containerized multi-service stacks with Docker and Docker Compose, automated Git-based deployment workflows, and MinIO S3-compatible asset storage.
+            </p>
+          </div>
+
+          <div class="engineering-card">
+            <span class="eng-num">03 / DATA LAYER</span>
+            <h3 class="eng-title">Relational &amp; Document DBs</h3>
+            <p class="eng-desc">
+              Optimizing relational models in PostgreSQL, MySQL, and MSSQL alongside flexible document stores in MongoDB, ensuring performant queries and schema consistency.
+            </p>
+          </div>
+
+          <div class="engineering-card">
+            <span class="eng-num">04 / AI WORKFLOWS</span>
+            <h3 class="eng-title">FastMCP &amp; Agentic Tools</h3>
+            <p class="eng-desc">
+              Implementing Model Context Protocol (MCP) servers in Python with FastAPI, enabling Claude, Gemini, and OpenAI clients to invoke enterprise tools reliably.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section id="experience" class="experience-section" aria-label="Professional Experience">
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <span class="section-label">CAREER HISTORY</span>
+          <h2 class="section-title">Professional <em>Experience.</em></h2>
+          <p class="section-desc">2+ years of hands-on software development across full-stack applications, microservices, and AI integrations.</p>
+          <div class="section-divider-line"></div>
+        </header>
+
+        <div class="experience-list" data-reveal>
+          <!-- Experience 1: Citymapia -->
+          <div class="experience-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role-title">AI &amp; Full Stack Developer</h3>
+                <div class="exp-company">Citymapia Pvt Ltd</div>
+              </div>
+              <div class="exp-meta">
+                <span>07/2024 – Present</span><br/>
+                <span>Kottayam, Kerala, India</span>
+              </div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Develop web applications using .NET, Python, React, JavaScript, HTML, CSS, Bootstrap, Tailwind CSS, and Vite.</li>
+              <li>Build responsive interfaces, reusable components, REST API integrations, and application workflows across frontend and backend services.</li>
+              <li>Develop Python analytics and AI solutions using FastAPI and FastMCP, including an internal MCP orchestrator connecting multiple tools and services.</li>
+              <li>Built <strong>Innercraft</strong>, a printing e-commerce platform with product customization, customer storefront, admin panel, REST microservices, PostgreSQL/MongoDB, RabbitMQ, Docker, and Git CI/CD.</li>
+              <li>Utilize modern AI developer tools (Claude, Cursor, ChatGPT, GitHub Copilot, Gemini, Cline) for accelerated implementation, debugging, and code refactoring.</li>
+              <li>Work with Dockerized deployments, Git workflows, service integration, and troubleshooting; joined company originally as a UI/UX-focused developer.</li>
+            </ul>
+          </div>
+
+          <!-- Experience 2: LCC Computer Education -->
+          <div class="experience-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role-title">Full Stack Python Developer Intern</h3>
+                <div class="exp-company">LCC Computer Education</div>
+              </div>
+              <div class="exp-meta">
+                <span>11/2023 – 04/2024</span><br/>
+                <span>Kochi, Kerala, India</span>
+              </div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Developed web projects using Python, Django, HTML, CSS, JavaScript, and Bootstrap.</li>
+              <li>Worked across frontend and backend components and completed the internship with an A grade.</li>
+            </ul>
+          </div>
+
+          <!-- Education -->
+          <div class="experience-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role-title">B.Sc. Computer Science</h3>
+                <div class="exp-company">School of Technology and Applied Science</div>
+              </div>
+              <div class="exp-meta">
+                <span>2020 – 2023</span><br/>
+                <span>Kottayam, India · 70%</span>
+              </div>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-secondary);">
+              Graduated with a strong foundation in Object-Oriented Programming (OOP), Data Structures, Algorithms, Software Engineering, and Database Architecture.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL ARSENAL & SKILLS -->
+    <section id="skills" class="skills-section" aria-label="Technical Skills">
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <span class="section-label">TECHNICAL COMPETENCIES</span>
+          <h2 class="section-title">Skills <em>&amp;</em> Tooling.</h2>
+          <p class="section-desc">Technologies and frameworks applied across production systems, microservices, and AI integrations.</p>
+          <div class="section-divider-line"></div>
+        </header>
+
+        <div class="skills-grid" data-reveal>
+          <div class="skill-category-card">
+            <h3 class="skill-category-title"><span>01</span> Languages</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">C# / .NET</span>
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">PHP</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card">
+            <h3 class="skill-category-title"><span>02</span> Frontend</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Vite</span>
+              <span class="skill-tag">Tailwind CSS</span>
+              <span class="skill-tag">Bootstrap</span>
+              <span class="skill-tag">GSAP</span>
+              <span class="skill-tag">Konva.js</span>
+              <span class="skill-tag">Fabric.js</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card">
+            <h3 class="skill-category-title"><span>03</span> Backend &amp; APIs</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">FastAPI</span>
+              <span class="skill-tag">FastMCP</span>
+              <span class="skill-tag">Django</span>
+              <span class="skill-tag">.NET Core</span>
+              <span class="skill-tag">Flask</span>
+              <span class="skill-tag">REST Microservices</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card">
+            <h3 class="skill-category-title"><span>04</span> Databases &amp; Infra</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">MSSQL</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">RabbitMQ</span>
+              <span class="skill-tag">Traefik</span>
+              <span class="skill-tag">MinIO</span>
+              <span class="skill-tag">Git / CI/CD</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card">
+            <h3 class="skill-category-title"><span>05</span> AI &amp; Modern Workflows</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">MCP (Model Context Protocol)</span>
+              <span class="skill-tag">Claude</span>
+              <span class="skill-tag">ChatGPT</span>
+              <span class="skill-tag">Cursor</span>
+              <span class="skill-tag">Copilot</span>
+              <span class="skill-tag">Gemini</span>
+              <span class="skill-tag">Cline</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card">
+            <h3 class="skill-category-title"><span>06</span> Certifications</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Full Stack Python Development — Grade A</span>
+              <span class="skill-tag">MCP for Beginners (Microsoft / LinkedIn)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section" aria-label="Contact">
+      <div class="container">
+        <div class="contact-layout">
+          <div class="contact-info-col" data-reveal>
+            <span class="section-label">GET IN TOUCH</span>
+            <h2 class="contact-hero-statement">
+              Let’s talk about <em>what comes next.</em>
+            </h2>
+
+            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.2rem;">
+              Whether you are looking for an AI &amp; Full Stack Developer for web applications, microservices, or custom AI tooling, I am always open to good conversations.
+            </p>
+
+            <div class="contact-email-card">
+              <span class="email-address-text">shijinriju358@gmail.com</span>
+              <button id="copy-email-btn" type="button" class="copy-email-btn btn-magnetic">
+                <span>Copy</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+              <div id="email-toast" class="toast-bubble">Copied!</div>
+            </div>
+
+            <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.5rem;">
+              <div>📍 Kottayam, Kerala, India</div>
+              <div>📞 +91 9961508109</div>
+              <div>⏰ Local Time: <strong id="global-clock">--:--:-- IST</strong></div>
+            </div>
+          </div>
+
+          <div class="contact-form-col" data-reveal>
+            <form id="contact-form" autocomplete="off">
+              <!-- Web3Forms Access Key & Configuration -->
+              <input type="hidden" name="access_key" value="7ee9516c-627a-42b1-9dbd-e5f100636fa3" />
+              <input type="hidden" name="subject" value="New Portfolio Message from Shijin Riju's Website" />
+              <input type="hidden" name="from_name" value="Portfolio Visitor" />
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Your Name</label>
+                <input id="contact-name" name="name" type="text" class="form-input" placeholder="e.g. Alex Kumar" required />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address</label>
+                <input id="contact-email" name="email" type="email" class="form-input" placeholder="alex@company.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message</label>
+                <textarea id="contact-message" name="message" class="form-textarea" placeholder="Tell me about your project or opportunity..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary btn-magnetic" style="width: 100%; justify-content: center;">
+                <span>Send Message →</span>
+              </button>
+
+              <div id="form-success-message" class="form-success-box">
+                Thank you! Message received. I will get back to you shortly.
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <div class="footer-top-row">
+            <div class="footer-nav">
+              <a href="#about">About</a>
+              <a href="#work">Work</a>
+              <a href="#engineering">Architecture</a>
+              <a href="#experience">Experience</a>
+              <a href="#skills">Skills</a>
+              <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-socials">
+              <a href="https://linkedin.com/in/shijin-riju-679ab62a9" target="_blank" rel="noopener">LinkedIn ↗</a>
+              <a href="https://github.com/ShijinRiju" target="_blank" rel="noopener">GitHub ↗</a>
+              <a href="mailto:shijinriju358@gmail.com">Email ↗</a>
+            </div>
+          </div>
+
+          <div class="footer-watermark-row">
+            <img src="/assets/shijin-logo-black.svg" alt="Shijin Logo" class="footer-watermark-logo" />
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <button id="back-to-top" class="back-to-top-btn btn-magnetic" type="button" aria-label="Back to top">
+    <svg class="progress-circle" viewBox="0 0 50 50">
+      <circle class="progress-circle-bg" cx="25" cy="25" r="20"></circle>
+      <circle class="progress-circle-bar" cx="25" cy="25" r="20"></circle>
+    </svg>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <!-- CASE STUDY DRAWER MODAL -->
+  <div id="project-modal" class="project-modal" role="dialog" aria-modal="true" aria-label="Case Study View">
+    <div class="modal-backdrop"></div>
+    <div class="modal-panel">
+      <div class="modal-header">
+        <span class="modal-awards" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-red); font-weight: 700;"></span>
+        <button class="modal-close" type="button" aria-label="Close modal">×</button>
+      </div>
+
+      <h3 class="modal-title"></h3>
+      <p class="modal-tagline"></p>
+
+      <div class="modal-meta-grid">
+        <div>
+          <span class="meta-item-label">Context</span>
+          <span class="meta-item-val modal-client"></span>
+        </div>
+        <div>
+          <span class="meta-item-label">Role</span>
+          <span class="meta-item-val modal-role"></span>
+        </div>
+        <div>
+          <span class="meta-item-label">Timeline</span>
+          <span class="meta-item-val modal-year"></span>
+        </div>
+      </div>
+
+      <div class="modal-hero-image-wrap">
+        <img src="" alt="" class="modal-image" />
+      </div>
+
+      <div class="modal-metrics-callout">
+        <div>
+          <div class="modal-metric-primary"></div>
+          <div class="modal-metric-label"></div>
+        </div>
+        <div>
+          <div class="modal-metric-secondary"></div>
+          <div class="modal-metric-secondary-label"></div>
+        </div>
+      </div>
+
+      <div class="modal-section-block">
+        <h4 class="modal-section-heading">Project Overview &amp; Challenge</h4>
+        <p class="modal-text modal-overview"></p>
+        <p class="modal-text modal-challenges" style="margin-top: 0.8rem;"></p>
+      </div>
+
+      <div class="modal-section-block">
+        <h4 class="modal-section-heading">Implementation &amp; Architecture</h4>
+        <p class="modal-text modal-solution"></p>
+      </div>
+
+      <div class="modal-section-block">
+        <h4 class="modal-section-heading">Technologies Deployed</h4>
+        <div class="modal-tech-pills"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

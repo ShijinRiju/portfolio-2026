@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <radialGradient id="carbAmb" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#FCFCFC"/>
+      <stop offset="100%" stop-color="#EDEDED"/>
+    </radialGradient>
+    <filter id="carbSlabShadow" x="-10%" y="-10%" width="120%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000000" flood-opacity="0.14"/>
+    </filter>
+    <clipPath id="carbScreenClip">
+      <rect x="90" y="65" width="1020" height="620" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#carbAmb)"/>
+
+  <!-- Device Chassis Slab -->
+  <g filter="url(#carbSlabShadow)">
+    <rect x="75" y="50" width="1050" height="650" rx="20" fill="#101012" stroke="#252528" stroke-width="2"/>
+    <rect x="76" y="51" width="1048" height="648" rx="19" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  </g>
+
+  <!-- Screen Content -->
+  <g clip-path="url(#carbScreenClip)">
+    <rect x="90" y="65" width="1020" height="620" fill="#141416"/>
+
+    <!-- Screen Header -->
+    <rect x="90" y="65" width="1020" height="52" fill="#1A1A1E"/>
+    <line x1="90" y1="117" x2="1110" y2="117" stroke="#27272A" stroke-width="1"/>
+    
+    <circle cx="120" cy="91" r="5" fill="#EF4444"/>
+    <circle cx="136" cy="91" r="5" fill="#F59E0B"/>
+    <circle cx="152" cy="91" r="5" fill="#10B981"/>
+    
+    <text x="180" y="96" font-family="'Manrope', sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Carbonmapia Environmental Analytics</text>
+    <text x="440" y="96" font-family="'Space Mono', monospace" font-size="11" fill="#71717A">GHG Protocol · Scope 1, 2, 3</text>
+
+    <!-- Top Badge -->
+    <rect x="970" y="78" width="115" height="26" rx="6" fill="#064E3B"/>
+    <text x="984" y="95" font-family="'Space Mono', monospace" font-size="10" font-weight="700" fill="#34D399">● VERIFIED 2025</text>
+
+    <!-- Left Stats Panel -->
+    <g transform="translate(120, 140)">
+      <rect x="0" y="0" width="280" height="100" rx="10" fill="#1C1C20" stroke="#27272A" stroke-width="1"/>
+      <text x="20" y="32" font-family="'Space Mono', monospace" font-size="10" fill="#A1A1AA">GROSS EMISSIONS</text>
+      <text x="20" y="72" font-family="'Manrope', sans-serif" font-size="28" font-weight="700" fill="#FFFFFF">1,420</text>
+      <text x="125" y="70" font-family="'Space Mono', monospace" font-size="11" fill="#EF4444">tCO2e</text>
+
+      <rect x="0" y="120" width="280" height="100" rx="10" fill="#1C1C20" stroke="#27272A" stroke-width="1"/>
+      <text x="20" y="152" font-family="'Space Mono', monospace" font-size="10" fill="#A1A1AA">REDUCTION DELTA</text>
+      <text x="20" y="192" font-family="'Manrope', sans-serif" font-size="28" font-weight="700" fill="#10B981">-38.4%</text>
+      <text x="155" y="190" font-family="'Space Mono', monospace" font-size="11" fill="#10B981">vs 2023</text>
+
+      <rect x="0" y="240" width="280" height="100" rx="10" fill="#2E1010" stroke="#7F1D1D" stroke-width="1"/>
+      <text x="20" y="272" font-family="'Space Mono', monospace" font-size="10" fill="#EF4444">TARGET NET ZERO</text>
+      <text x="20" y="312" font-family="'Manrope', sans-serif" font-size="28" font-weight="700" fill="#EF4444">2030</text>
+      <text x="105" y="310" font-family="'Space Mono', monospace" font-size="11" fill="#EF4444">Active</text>
+
+      <!-- Scope Breakdown Bar -->
+      <rect x="0" y="360" width="280" height="150" rx="10" fill="#1C1C20" stroke="#27272A" stroke-width="1"/>
+      <text x="20" y="390" font-family="'Manrope', sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Emission by Scopes</text>
+      <text x="20" y="420" font-family="'Space Mono', monospace" font-size="10" fill="#71717A">Scope 1: 24% · Scope 2: 48%</text>
+      
+      <rect x="20" y="435" width="240" height="8" rx="4" fill="#27272A"/>
+      <rect x="20" y="435" width="60" height="8" rx="4" fill="#EF4444"/>
+      <rect x="80" y="435" width="115" height="8" rx="4" fill="#3B82F6"/>
+      <rect x="195" y="435" width="65" height="8" rx="4" fill="#10B981"/>
+
+      <text x="20" y="475" font-family="'Space Mono', monospace" font-size="10" fill="#10B981">● Grid Solar Shift: +22%</text>
+    </g>
+
+    <!-- Right Large Chart Stage -->
+    <g transform="translate(425, 140)">
+      <rect x="0" y="0" width="655" height="510" rx="12" fill="#18181C" stroke="#27272A" stroke-width="1"/>
+      
+      <text x="25" y="36" font-family="'Manrope', sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Decarbonization Trajectory (Monthly Trends)</text>
+      <text x="25" y="56" font-family="'Space Mono', monospace" font-size="10" fill="#71717A">Telemetry stream active across 12 facilities</text>
+
+      <!-- Grid lines -->
+      <line x1="40" y1="110" x2="615" y2="110" stroke="#27272A" stroke-width="1"/>
+      <line x1="40" y1="180" x2="615" y2="180" stroke="#27272A" stroke-width="1"/>
+      <line x1="40" y1="250" x2="615" y2="250" stroke="#27272A" stroke-width="1"/>
+      <line x1="40" y1="320" x2="615" y2="320" stroke="#27272A" stroke-width="1"/>
+      <line x1="40" y1="390" x2="615" y2="390" stroke="#27272A" stroke-width="1"/>
+
+      <!-- Muted Target Curve -->
+      <path d="M 40 160 Q 180 140, 320 180 T 615 130" fill="none" stroke="#3F3F46" stroke-width="2" stroke-dasharray="6 4"/>
+
+      <!-- Actual Trajectory Curve with Red Gradient Fill -->
+      <path d="M 40 220 Q 180 250, 320 190 T 500 310 T 615 370 L 615 390 L 40 390 Z" fill="rgba(230,0,0,0.08)"/>
+      <path d="M 40 220 Q 180 250, 320 190 T 500 310 T 615 370" fill="none" stroke="#EF4444" stroke-width="3"/>
+
+      <!-- Key Coordinates -->
+      <circle cx="40" cy="220" r="4" fill="#EF4444"/>
+      <circle cx="320" cy="190" r="4" fill="#EF4444"/>
+      <circle cx="500" cy="310" r="4" fill="#EF4444"/>
+      <circle cx="615" cy="370" r="5" fill="#FFFFFF" stroke="#EF4444" stroke-width="2.5"/>
+
+      <!-- Tooltip -->
+      <rect x="495" y="325" width="135" height="42" rx="6" fill="#09090B" stroke="#27272A" stroke-width="1"/>
+      <text x="510" y="344" font-family="'Manrope', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">November Audit</text>
+      <text x="510" y="358" font-family="'Space Mono', monospace" font-size="10" fill="#EF4444">82 tCO2e (-42%)</text>
+
+      <!-- Month Labels -->
+      <text x="40" y="425" font-family="'Space Mono', monospace" font-size="10" fill="#71717A">JAN</text>
+      <text x="150" y="425" font-family="'Space Mono', monospace" font-size="10" fill="#71717A">MAR</text>
+      <text x="260" y="425" font-family="'Space Mono', monospace" font-size="10" fill="#71717A">JUN</text>
+      <text x="370" y="425" font-family="'Space Mono', monospace" font-size="10" fill="#71717A">AUG</text>
+      <text x="480" y="425" font-family="'Space Mono', monospace" font-size="10" fill="#71717A">OCT</text>
+      <text x="590" y="425" font-family="'Space Mono', monospace" font-size="10" fill="#71717A">DEC</text>
+    </g>
+  </g>
+</svg>

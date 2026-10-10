@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <radialGradient id="wsAmb" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#FCFCFC"/>
+      <stop offset="100%" stop-color="#EDEDED"/>
+    </radialGradient>
+    <filter id="wsSlabShadow" x="-10%" y="-10%" width="120%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000000" flood-opacity="0.14"/>
+    </filter>
+    <clipPath id="wsScreenClip">
+      <rect x="90" y="65" width="1020" height="620" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#wsAmb)"/>
+
+  <!-- Device Chassis Slab -->
+  <g filter="url(#wsSlabShadow)">
+    <rect x="75" y="50" width="1050" height="650" rx="20" fill="#121214" stroke="#252528" stroke-width="2"/>
+    <rect x="76" y="51" width="1048" height="648" rx="19" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  </g>
+
+  <!-- Screen Content -->
+  <g clip-path="url(#wsScreenClip)">
+    <rect x="90" y="65" width="1020" height="620" fill="#18181B"/>
+
+    <!-- Screen Header -->
+    <rect x="90" y="65" width="1020" height="52" fill="#1F1F23"/>
+    <line x1="90" y1="117" x2="1110" y2="117" stroke="#2E2E33" stroke-width="1"/>
+    
+    <circle cx="120" cy="91" r="5" fill="#EF4444"/>
+    <circle cx="136" cy="91" r="5" fill="#F59E0B"/>
+    <circle cx="152" cy="91" r="5" fill="#10B981"/>
+    
+    <text x="180" y="96" font-family="'Manrope', sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Citymapia WorkSuit</text>
+    <text x="330" y="96" font-family="'Space Mono', monospace" font-size="11" fill="#71717A">Enterprise Workforce &amp; Payroll Suite</text>
+
+    <!-- Top Right Action -->
+    <rect x="980" y="78" width="105" height="26" rx="6" fill="#E60000"/>
+    <text x="998" y="95" font-family="'Manrope', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">+ ADD MEMBER</text>
+
+    <!-- KPI Metric Cards Grid -->
+    <g transform="translate(120, 135)">
+      <!-- KPI 1 -->
+      <rect x="0" y="0" width="225" height="85" rx="10" fill="#222226" stroke="#2E2E33" stroke-width="1"/>
+      <text x="18" y="28" font-family="'Space Mono', monospace" font-size="10" fill="#A1A1AA">TOTAL STAFF</text>
+      <text x="18" y="62" font-family="'Manrope', sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">128</text>
+      <text x="145" y="60" font-family="'Space Mono', monospace" font-size="11" fill="#EF4444">+12 qtr</text>
+
+      <!-- KPI 2 -->
+      <rect x="245" y="0" width="225" height="85" rx="10" fill="#222226" stroke="#2E2E33" stroke-width="1"/>
+      <text x="18" y="28" font-family="'Space Mono', monospace" font-size="10" fill="#A1A1AA">ON DUTY TODAY</text>
+      <text x="18" y="62" font-family="'Manrope', sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">114</text>
+      <circle cx="195" cy="54" r="5" fill="#10B981"/>
+
+      <!-- KPI 3 -->
+      <rect x="490" y="0" width="225" height="85" rx="10" fill="#222226" stroke="#2E2E33" stroke-width="1"/>
+      <text x="18" y="28" font-family="'Space Mono', monospace" font-size="10" fill="#A1A1AA">ON LEAVE</text>
+      <text x="18" y="62" font-family="'Manrope', sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">14</text>
+      <circle cx="195" cy="54" r="5" fill="#F59E0B"/>
+
+      <!-- KPI 4 -->
+      <rect x="735" y="0" width="225" height="85" rx="10" fill="#2E1010" stroke="#7F1D1D" stroke-width="1"/>
+      <text x="18" y="28" font-family="'Space Mono', monospace" font-size="10" fill="#EF4444">ATTENDANCE</text>
+      <text x="18" y="62" font-family="'Manrope', sans-serif" font-size="26" font-weight="700" fill="#EF4444">94.8%</text>
+    </g>
+
+    <!-- Data Table -->
+    <g transform="translate(120, 240)">
+      <rect x="0" y="0" width="960" height="420" rx="10" fill="#1C1C20" stroke="#27272A" stroke-width="1"/>
+      
+      <!-- Table Header -->
+      <rect x="0" y="0" width="960" height="44" rx="10" fill="#222226"/>
+      <text x="25" y="27" font-family="'Manrope', sans-serif" font-size="11" font-weight="700" fill="#A1A1AA">TEAM MEMBER</text>
+      <text x="280" y="27" font-family="'Manrope', sans-serif" font-size="11" font-weight="700" fill="#A1A1AA">DEPARTMENT</text>
+      <text x="480" y="27" font-family="'Manrope', sans-serif" font-size="11" font-weight="700" fill="#A1A1AA">ROLE</text>
+      <text x="680" y="27" font-family="'Manrope', sans-serif" font-size="11" font-weight="700" fill="#A1A1AA">STATUS</text>
+      <text x="850" y="27" font-family="'Manrope', sans-serif" font-size="11" font-weight="700" fill="#A1A1AA">QUICK ACTION</text>
+
+      <!-- Row 1 -->
+      <g transform="translate(0, 44)">
+        <circle cx="40" cy="30" r="14" fill="#E60000"/>
+        <text x="40" y="34" text-anchor="middle" font-family="'Manrope', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">SR</text>
+        <text x="68" y="26" font-family="'Manrope', sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Shijin Riju</text>
+        <text x="68" y="42" font-family="'Space Mono', monospace" font-size="10" fill="#71717A">EMP-2024-042</text>
+        
+        <rect x="280" y="16" width="95" height="24" rx="4" fill="#27272A"/>
+        <text x="294" y="32" font-family="'Manrope', sans-serif" font-size="11" fill="#E4E4E7">Engineering</text>
+        
+        <text x="480" y="33" font-family="'Manrope', sans-serif" font-size="12" fill="#D4D4D8">AI &amp; Full Stack Lead</text>
+        
+        <rect x="680" y="16" width="75" height="24" rx="12" fill="#14532D"/>
+        <text x="695" y="32" font-family="'Manrope', sans-serif" font-size="10" font-weight="700" fill="#4ADE80">● Active</text>
+        
+        <text x="850" y="33" font-family="'Manrope', sans-serif" font-size="12" font-weight="600" fill="#EF4444">Inspect →</text>
+        <line x1="0" y1="58" x2="960" y2="58" stroke="#27272A" stroke-width="1"/>
+      </g>
+
+      <!-- Row 2 -->
+      <g transform="translate(0, 102)">
+        <circle cx="40" cy="30" r="14" fill="#27272A"/>
+        <text x="40" y="34" text-anchor="middle" font-family="'Manrope', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">AM</text>
+        <text x="68" y="26" font-family="'Manrope', sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Ananya Menon</text>
+        <text x="68" y="42" font-family="'Space Mono', monospace" font-size="10" fill="#71717A">EMP-2024-031</text>
+        
+        <rect x="280" y="16" width="75" height="24" rx="4" fill="#27272A"/>
+        <text x="294" y="32" font-family="'Manrope', sans-serif" font-size="11" fill="#E4E4E7">Product</text>
+        
+        <text x="480" y="33" font-family="'Manrope', sans-serif" font-size="12" fill="#D4D4D8">UI/UX Designer</text>
+        
+        <rect x="680" y="16" width="75" height="24" rx="12" fill="#14532D"/>
+        <text x="695" y="32" font-family="'Manrope', sans-serif" font-size="10" font-weight="700" fill="#4ADE80">● Active</text>
+        
+        <text x="850" y="33" font-family="'Manrope', sans-serif" font-size="12" font-weight="600" fill="#EF4444">Inspect →</text>
+        <line x1="0" y1="58" x2="960" y2="58" stroke="#27272A" stroke-width="1"/>
+      </g>
+
+      <!-- Row 3 -->
+      <g transform="translate(0, 160)">
+        <circle cx="40" cy="30" r="14" fill="#3F3F46"/>
+        <text x="40" y="34" text-anchor="middle" font-family="'Manrope', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">RK</text>
+        <text x="68" y="26" font-family="'Manrope', sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Rahul Kaimal</text>
+        <text x="68" y="42" font-family="'Space Mono', monospace" font-size="10" fill="#71717A">EMP-2023-018</text>
+        
+        <rect x="280" y="16" width="85" height="24" rx="4" fill="#27272A"/>
+        <text x="294" y="32" font-family="'Manrope', sans-serif" font-size="11" fill="#E4E4E7">Operations</text>
+        
+        <text x="480" y="33" font-family="'Manrope', sans-serif" font-size="12" fill="#D4D4D8">Backend Systems</text>
+        
+        <rect x="680" y="16" width="85" height="24" rx="12" fill="#78350F"/>
+        <text x="695" y="32" font-family="'Manrope', sans-serif" font-size="10" font-weight="700" fill="#FCD34D">● On Leave</text>
+        
+        <text x="850" y="33" font-family="'Manrope', sans-serif" font-size="12" font-weight="600" fill="#EF4444">Inspect →</text>
+      </g>
+    </g>
+  </g>
+</svg>
