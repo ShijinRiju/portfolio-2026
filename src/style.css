@@ -54,15 +54,9 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
-  max-width: 100%;
 }
 
 body {
-  overflow-x: hidden;
-  max-width: 100%;
-  width: 100%;
-  position: relative;
   background: var(--bg-primary);
   line-height: 1.6;
 }
@@ -1426,7 +1420,8 @@ h1 em, h2 em, h3 em, .hero-title em, .section-title em {
 
 .footer-nav {
   display: flex;
-  gap: 1.8rem;
+  flex-wrap: wrap;
+  gap: clamp(0.9rem, 1.8vw, 1.8rem);
   font-size: 0.88rem;
   font-weight: 500;
 }
@@ -1437,6 +1432,7 @@ h1 em, h2 em, h3 em, .hero-title em, .section-title em {
 
 .footer-socials {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.4rem;
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -1887,13 +1883,21 @@ h1 em, h2 em, h3 em, .hero-title em, .section-title em {
 @media (max-width: 992px) {
   .hero-section {
     min-height: calc(100vh - 68px);
-    overflow: hidden;
+    min-height: calc(100svh - 68px);
+    padding-top: clamp(1.5rem, 4vw, 2.5rem);
+    padding-bottom: clamp(3.5rem, 7vw, 5rem);
+    display: flex;
+    align-items: center;
+    position: relative;
   }
   .hero-container {
-    min-height: calc(100vh - 68px);
-    padding-block: 2.5rem 3rem;
+    min-height: calc(100vh - 68px - 3rem);
+    min-height: 560px;
+    padding-block: 2rem 2.5rem;
     position: relative;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .hero-grid {
     display: block;
@@ -1905,17 +1909,19 @@ h1 em, h2 em, h3 em, .hero-title em, .section-title em {
     z-index: 2;
     max-width: 100%;
   }
-  /* 3D logo in the background behind text with low opacity, no stacking */
+  /* 3D logo in the background behind text with ample room so it never cuts off */
   .hero-visual-col {
     position: absolute;
-    inset: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
+    max-width: 500px;
     height: 100%;
-    max-width: 100%;
+    min-height: 560px;
     pointer-events: none;
     z-index: 1;
-    opacity: 0.22;
-    overflow: hidden;
+    opacity: 0.20;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1926,7 +1932,6 @@ h1 em, h2 em, h3 em, .hero-title em, .section-title em {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    overflow: hidden;
   }
   .hero-scroll-cue {
     display: none;
@@ -1957,6 +1962,29 @@ h1 em, h2 em, h3 em, .hero-title em, .section-title em {
   }
   .contact-layout {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+    margin-bottom: 2.2rem;
+  }
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem 1.4rem;
+    width: 100%;
+  }
+  .footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.4rem;
+    width: 100%;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border-light);
   }
 }
 
