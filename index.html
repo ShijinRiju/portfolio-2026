@@ -73,6 +73,16 @@
         <img src="/assets/shijin-logo-black.svg" alt="Shijin Riju" class="logo-svg" />
       </a>
 
+      <!-- Desktop Navigation Pill (Restored) -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="#about" class="nav-link btn-magnetic">About</a>
+        <a href="#work" class="nav-link btn-magnetic">Work</a>
+        <a href="#engineering" class="nav-link btn-magnetic">Architecture</a>
+        <a href="#experience" class="nav-link btn-magnetic">Experience</a>
+        <a href="#skills" class="nav-link btn-magnetic">Skills</a>
+        <a href="#contact" class="nav-link btn-magnetic">Contact</a>
+      </nav>
+
       <div class="header-actions">
         <a href="mailto:shijinriju358@gmail.com" class="resume-btn btn-magnetic">
           <span>Resume</span>
@@ -85,9 +95,97 @@
         <a href="#contact" class="header-cta btn-magnetic">
           <span>Say hello</span>
         </a>
+
+        <!-- Awwwards-Style Modern Mobile Hamburger Trigger -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav-overlay">
+          <span class="burger-icon" aria-hidden="true">
+            <span class="burger-line line-top"></span>
+            <span class="burger-line line-bottom"></span>
+          </span>
+          <span class="burger-text">Menu</span>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- Awwwards-Style Fullscreen Mobile Navigation Curtain -->
+  <div id="mobile-nav-overlay" class="mobile-nav-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    <!-- Red accent top edge indicator -->
+    <div class="mobile-nav-accent-bar" aria-hidden="true"></div>
+    
+    <div class="mobile-nav-inner-container">
+      <!-- Navigation links list with editorial numbers -->
+      <div class="mobile-nav-content">
+        <div class="mobile-nav-tag">INDEX // NAVIGATION</div>
+        <nav class="mobile-nav-links" aria-label="Mobile Navigation">
+          <div class="mobile-nav-item-wrap">
+            <a href="#about" class="mobile-nav-link" data-index="01">
+              <span class="mobile-nav-num">01</span>
+              <span class="mobile-nav-text">About</span>
+              <span class="mobile-nav-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+          <div class="mobile-nav-item-wrap">
+            <a href="#work" class="mobile-nav-link" data-index="02">
+              <span class="mobile-nav-num">02</span>
+              <span class="mobile-nav-text">Selected Work</span>
+              <span class="mobile-nav-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+          <div class="mobile-nav-item-wrap">
+            <a href="#engineering" class="mobile-nav-link" data-index="03">
+              <span class="mobile-nav-num">03</span>
+              <span class="mobile-nav-text">Architecture</span>
+              <span class="mobile-nav-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+          <div class="mobile-nav-item-wrap">
+            <a href="#experience" class="mobile-nav-link" data-index="04">
+              <span class="mobile-nav-num">04</span>
+              <span class="mobile-nav-text">Experience</span>
+              <span class="mobile-nav-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+          <div class="mobile-nav-item-wrap">
+            <a href="#skills" class="mobile-nav-link" data-index="05">
+              <span class="mobile-nav-num">05</span>
+              <span class="mobile-nav-text">Skills</span>
+              <span class="mobile-nav-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+          <div class="mobile-nav-item-wrap">
+            <a href="#contact" class="mobile-nav-link" data-index="06">
+              <span class="mobile-nav-num">06</span>
+              <span class="mobile-nav-text">Contact</span>
+              <span class="mobile-nav-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Mobile menu bottom bar with status, email, socials -->
+      <div class="mobile-nav-footer">
+        <div class="mobile-nav-footer-status">
+          <span class="status-pulse-dot"></span>
+          <span>AVAILABLE FOR FULL-STACK &amp; AI ROLES</span>
+        </div>
+        <div class="mobile-nav-footer-row">
+          <div class="mobile-nav-contact-col">
+            <span class="footer-sub-label">DIRECT EMAIL</span>
+            <a href="mailto:shijinriju358@gmail.com" class="footer-email-link">shijinriju358@gmail.com</a>
+          </div>
+          <div class="mobile-nav-socials-col">
+            <span class="footer-sub-label">CONNECT</span>
+            <div class="mobile-footer-links">
+              <a href="https://github.com/shijinriju" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+              <a href="https://linkedin.com/in/shijinriju" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+              <a href="mailto:shijinriju358@gmail.com">Resume ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <main id="main">
     <!-- HERO SECTION (Containerised 2-Column Grid) -->

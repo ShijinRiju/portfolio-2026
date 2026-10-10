@@ -193,7 +193,7 @@ export function initThreeScene(canvasId = 'hero-canvas') {
     camera.updateProjectionMatrix();
     renderer.setSize(w, h);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    baseScale = window.innerWidth < 480 ? 0.52 : window.innerWidth < 768 ? 0.62 : window.innerWidth < 1024 ? 0.82 : 0.96;
+    baseScale = window.innerWidth < 480 ? 0.46 : window.innerWidth < 768 ? 0.58 : window.innerWidth < 1024 ? 0.80 : 0.96;
   };
   window.addEventListener('resize', onResize);
   onResize();

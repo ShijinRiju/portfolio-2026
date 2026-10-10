@@ -15,6 +15,8 @@ export function initAnimations() {
   initTimelineTabs();
   initContactInteractions();
   initBackToTop(lenis);
+  initDesktopNavHighlight();
+  initMobileMenu(lenis);
 
   return { lenis };
 }
@@ -43,6 +45,9 @@ function initLenis() {
   // Smooth anchor navigation
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', (e) => {
+      // Mobile nav links are handled with custom animation sequence in initMobileMenu
+      if (anchor.classList.contains('mobile-nav-link')) return;
+
       const href = anchor.getAttribute('href');
       if (href && href !== '#' && document.querySelector(href)) {
         e.preventDefault();
@@ -454,3 +459,128 @@ function initBackToTop(lenis) {
     audio.playClick();
   });
 }
+
+// 10. Desktop Nav Active Highlight via ScrollTrigger
+function initDesktopNavHighlight() {
+  const sections = ['#hero', '#about', '#work', '#engineering', '#experience', '#skills', '#contact'];
+  const navLinks = document.querySelectorAll('.nav-desktop .nav-link');
+  if (!navLinks.length) return;
+
+  sections.forEach((id) => {
+    const el = document.querySelector(id);
+    if (!el) return;
+
+    ScrollTrigger.create({
+      trigger: el,
+      start: 'top 45%',
+      end: 'bottom 45%',
+      onToggle: (self) => {
+        if (self.isActive) {
+          navLinks.forEach((link) => {
+            if (link.getAttribute('href') === id) {
+              link.classList.add('is-active');
+            } else {
+              link.classList.remove('is-active');
+            }
+          });
+        }
+      }
+    });
+  });
+}
+
+// 11. Awwwards-Grade Animated Mobile Hamburger Menu
+function initMobileMenu(lenis) {
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const overlay = document.getElementById('mobile-nav-overlay');
+  if (!menuBtn || !overlay) return;
+
+  const burgerText = menuBtn.querySelector('.burger-text');
+  const navItems = overlay.querySelectorAll('.mobile-nav-item-wrap');
+  const navLinks = overlay.querySelectorAll('.mobile-nav-link');
+  const footerEl = overlay.querySelector('.mobile-nav-footer');
+
+  let isOpen = false;
+
+  function openMenu() {
+    if (isOpen) return;
+    isOpen = true;
+    overlay.classList.add('is-open');
+    menuBtn.classList.add('is-active');
+    menuBtn.setAttribute('aria-expanded', 'true');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('mobile-nav-locked');
+    if (burgerText) burgerText.textContent = 'Close';
+    if (lenis) lenis.stop();
+
+    // Staggered link reveal
+    gsap.fromTo(navItems,
+      { y: 30, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.45, stagger: 0.05, ease: 'power3.out', delay: 0.1 }
+    );
+    if (footerEl) {
+      gsap.fromTo(footerEl,
+        { y: 15, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.4, ease: 'power2.out', delay: 0.25 }
+      );
+    }
+  }
+
+  function closeMenu(onClosed) {
+    if (!isOpen) return;
+    isOpen = false;
+    overlay.classList.remove('is-open');
+    menuBtn.classList.remove('is-active');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('mobile-nav-locked');
+    if (burgerText) burgerText.textContent = 'Menu';
+    if (lenis) lenis.start();
+
+    if (typeof onClosed === 'function') {
+      setTimeout(onClosed, 350);
+    }
+  }
+
+  menuBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // Handle mobile link clicks: close and scroll
+  navLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const href = link.getAttribute('href');
+      closeMenu(() => {
+        if (href && href !== '#' && document.querySelector(href)) {
+          if (lenis) {
+            lenis.scrollTo(href, { offset: -40, duration: 1.2 });
+          } else {
+            const target = document.querySelector(href);
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+  });
+
+  // Close on Escape key
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isOpen) {
+      closeMenu();
+    }
+  });
+
+  // Close if window resized to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 992 && isOpen) {
+      closeMenu();
+    }
+  }, { passive: true });
+}
+
