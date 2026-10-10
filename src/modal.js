@@ -93,10 +93,11 @@ export const projectsData = [
   }
 ];
 
-export function initProjectModal() {
+export function initProjectModal(lenis = null) {
   const modal = document.getElementById('project-modal');
   if (!modal) return;
 
+  const panel = modal.querySelector('.modal-panel');
   const closeBtn = modal.querySelector('.modal-close');
   const backdrop = modal.querySelector('.modal-backdrop');
   const triggerBtns = document.querySelectorAll('[data-project-trigger]');
@@ -111,15 +112,25 @@ export function initProjectModal() {
     populateModal(project);
 
     modal.classList.add('is-open');
+    document.documentElement.style.overflow = 'hidden';
     document.body.style.overflow = 'hidden';
+    if (lenis) lenis.stop();
+    if (panel) panel.scrollTop = 0;
     audio.playChime(520);
   }
 
   function closeModal() {
     modal.classList.remove('is-open');
+    document.documentElement.style.overflow = '';
     document.body.style.overflow = '';
+    if (lenis) lenis.start();
     audio.playClick();
   }
+
+  // Prevent wheel events from propagating to window while modal is open
+  modal.addEventListener('wheel', (e) => {
+    e.stopPropagation();
+  }, { passive: true });
 
   function populateModal(p) {
     modal.querySelector('.modal-title').textContent = p.title;

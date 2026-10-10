@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initThreeScene('hero-canvas');
 
   // 2. Initialize GSAP, Lenis, and interaction choreographies
-  initAnimations();
+  const { lenis } = initAnimations();
 
-  // 3. Initialize Case study detail modal
-  initProjectModal();
+  // 3. Initialize Case study detail modal with scroll lock
+  initProjectModal(lenis);
 
   // 6. Real-time Indian Standard Time (IST) Clock in Contact Section
   function updateClock() {
