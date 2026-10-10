@@ -13,10 +13,18 @@ export function initThreeScene(canvasId = 'hero-canvas') {
 
   const scene = new THREE.Scene();
 
-  // Get canvas wrapper dimensions (containerised visual column)
+  // Get canvas wrapper dimensions
   const getWrapperSize = () => {
     const wrapper = canvas.parentElement;
     const visualCol = wrapper ? wrapper.closest('.hero-visual-col') : null;
+    const heroSec = document.getElementById('hero');
+
+    if (window.innerWidth < 992) {
+      const w = wrapper && wrapper.offsetWidth > 0 ? wrapper.offsetWidth : window.innerWidth;
+      const h = (heroSec && heroSec.offsetHeight > 0) ? heroSec.offsetHeight : Math.max(window.innerHeight - 68, 480);
+      return { w, h };
+    }
+
     const colW = visualCol ? visualCol.offsetWidth : 0;
     const colH = visualCol ? visualCol.offsetHeight : 0;
 
@@ -185,7 +193,7 @@ export function initThreeScene(canvasId = 'hero-canvas') {
     camera.updateProjectionMatrix();
     renderer.setSize(w, h);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    baseScale = window.innerWidth < 768 ? 0.70 : window.innerWidth < 1024 ? 0.84 : 0.96;
+    baseScale = window.innerWidth < 640 ? 0.65 : window.innerWidth < 992 ? 0.78 : 0.96;
   };
   window.addEventListener('resize', onResize);
   onResize();

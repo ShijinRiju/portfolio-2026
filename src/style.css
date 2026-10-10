@@ -54,10 +54,15 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
   background: var(--bg-primary);
   line-height: 1.6;
 }
@@ -1880,26 +1885,48 @@ h1 em, h2 em, h3 em, .hero-title em, .section-title em {
 }
 
 @media (max-width: 992px) {
+  .hero-section {
+    min-height: calc(100vh - 68px);
+    overflow: hidden;
+  }
   .hero-container {
-    min-height: auto;
-    padding-block: 1.5rem 2rem;
+    min-height: calc(100vh - 68px);
+    padding-block: 2.5rem 3rem;
+    position: relative;
+    overflow: hidden;
   }
   .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    display: block;
+    position: relative;
+    width: 100%;
   }
   .hero-content {
+    position: relative;
+    z-index: 2;
     max-width: 100%;
   }
+  /* 3D logo in the background behind text with low opacity, no stacking */
   .hero-visual-col {
-    height: 340px;
-    margin-inline: auto;
-    max-width: 420px;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.22;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .hero-canvas-wrapper {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    opacity: 1;
-    pointer-events: auto;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
   }
   .hero-scroll-cue {
     display: none;
@@ -1941,20 +1968,38 @@ h1 em, h2 em, h3 em, .hero-title em, .section-title em {
     padding: 0.38rem 0.8rem;
     font-size: 0.78rem;
   }
+  .hero-badge {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.65rem;
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1.4;
+  }
   .hero-content {
     max-width: 100%;
   }
   .hero-title {
-    font-size: 2rem;
+    font-size: clamp(1.85rem, 7.5vw, 2.2rem);
+    word-break: normal;
   }
   .hero-visual-col {
-    height: 290px;
-    max-width: 320px;
+    opacity: 0.18;
   }
-  .hero-canvas-wrapper {
-    width: 100%;
-    opacity: 1;
-    pointer-events: auto;
+  .engineering-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-email-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+  }
+  .email-address-text {
+    font-size: 0.82rem;
+    word-break: break-all;
   }
   .modal-meta-grid {
     grid-template-columns: 1fr;
